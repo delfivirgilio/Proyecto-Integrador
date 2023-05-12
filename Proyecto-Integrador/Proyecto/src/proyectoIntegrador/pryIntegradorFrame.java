@@ -6,6 +6,7 @@ package proyectoIntegrador;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -71,6 +72,7 @@ public class pryIntegradorFrame extends javax.swing.JFrame {
         btnBuscarDni = new javax.swing.JButton();
         btnBuscarAp = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
+        btnDesarrolladores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -183,6 +185,13 @@ public class pryIntegradorFrame extends javax.swing.JFrame {
             }
         });
 
+        btnDesarrolladores.setText("DESARROLLADORES");
+        btnDesarrolladores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDesarrolladoresActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -208,15 +217,17 @@ public class pryIntegradorFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBaja)
-                        .addContainerGap(670, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnBuscarMat)
                             .addComponent(btnBuscarDni)
                             .addComponent(btnBuscarAp))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBaja)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnDesarrolladores)
+                        .addGap(16, 16, 16))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,7 +265,8 @@ public class pryIntegradorFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnBaja)
-                    .addComponent(btnEditar))
+                    .addComponent(btnEditar)
+                    .addComponent(btnDesarrolladores))
                 .addGap(26, 26, 26))
         );
 
@@ -417,6 +429,10 @@ public class pryIntegradorFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEditarActionPerformed
 
+    private void btnDesarrolladoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesarrolladoresActionPerformed
+        JOptionPane.showMessageDialog(null,"Desarrolladores: Feijoo Federico,Infanti Mariano,Virgilio Delfina.\nCurso 7mo3ra :) ");
+    }//GEN-LAST:event_btnDesarrolladoresActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -458,6 +474,7 @@ public class pryIntegradorFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarAp;
     private javax.swing.JButton btnBuscarDni;
     private javax.swing.JButton btnBuscarMat;
+    private javax.swing.JButton btnDesarrolladores;
     private javax.swing.JButton btnEditar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
